@@ -1,0 +1,43 @@
+$fontColor: blue
+
+.center 
+  margin: 0 auto
+  
+=container($maxWidth: 1200px, $margin: 0 auto)
+  width: 100%
+  max-width: $maxWidth
+  margin: $margin
+
+header 
+  +container()
+  ul
+    @extend .center
+    li
+      &:hover 
+        background: #999
+        
+      a 
+        padding: 15px
+        color: $fontColor
+        
+        &:hover
+          color: #333
+      
+main
+  .container,
+  .wrapper
+    +container(900px)
+    
+.col-6 
+  width: 50%
+    
+@media (max-width: 768px)
+  header 
+    a 
+      color: red
+
+h1
+  color: red
+
+h2
+  color: blue
